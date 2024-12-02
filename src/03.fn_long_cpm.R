@@ -4,9 +4,14 @@
 # For Neophytou et al., 2024 the whole script is not 100% necesary but 
 # I'll save some lines to be able to accses to the code for non CPM norm plots
 pacman::p_load(ggplot2, ggpubr, pals, reshape2, scales, dplyr, purrr, edgeR, tibble)
-mtx = list.files(pattern = "acey.exwago.fn.all_lengths.Rds")
+inFile="acey.exwago.fn.all_lengths.Rds"
+outFile = paste0(sub("\\..*", "", inFile),".exWAGO_IP_raw_cpm.Rds")
+
+mtx = inFile
 lst = lapply(mtx, readRDS)
 lst = lst[[1]] 
+
+
 
 groups = names(lst) %>% strsplit("_") %>%
   map(function(x){paste(x[c(1,2,3,4)], collapse = "_")}) %>%  unlist() %>% 
@@ -272,5 +277,5 @@ for (i in names(groups)) {
 }
 
 # For manuscript figures I will only save the cpm table to then plot all libs
-saveRDS(mean_fn_cpm_lis, "hBake_exWAGO_IP_raw_cpm.Rds")
+saveRDS(mean_fn_cpm_lis, outFile)
 
