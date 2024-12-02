@@ -4,42 +4,51 @@
 ```
 $srcPath/reaper -i $file -geom no-bc -3pa $adp3 -3p-global 12/2/1 -3p-prefix 8/2/1 -3p-head-to-tail 1 -nnn-check 3/5 -format-clean @%I%n%C%n+%n%Q%n -polya  5 -qqq-check 35/10 -tri 35""
 ```
-	1.	-i $file
+1.	-i $file
 Specifies the input file containing raw sequencing reads. $file is a placeholder for the actual file name.
-	2.	-geom no-bc
+
+2.	-geom no-bc
 Indicates that there are no barcodes in the reads. This disables barcode parsing and processing.
-	3.	-3pa $adp3
+
+3.	-3pa $adp3
 Specifies the 3’ adapter sequence ($adp3) to be trimmed from the reads. $adp3 is a placeholder for the actual adapter sequence.
-	4.	-3p-global 12/2/1
-Defines the scoring scheme for global alignment during 3’ adapter trimming:
-	•	12: Match score.
-	•	2: Mismatch penalty.
-	•	1: Gap penalty.
-	5.	-3p-prefix 8/2/1
+
+4.	-3p-global 12/2/1
+defines the scoring scheme for global alignment during 3’ adapter trimming:
+	12: Match score.
+	2: Mismatch penalty.
+	1: Gap penalty.
+5.	-3p-prefix 8/2/1
 Sets the scoring scheme for 3’ adapter trimming using a prefix alignment:
-	•	8: Match score.
-	•	2: Mismatch penalty.
-	•	1: Gap penalty.
-	6.	-3p-head-to-tail 1
+	8: Match score.
+	2: Mismatch penalty.
+	1: Gap penalty.
+
+6.	-3p-head-to-tail 1
 Specifies whether to trim adapters in head-to-tail alignment mode:
-	•	1: Enables head-to-tail alignment (adapter sequences concatenated).
-	7.	-nnn-check 3/5
+1: Enables head-to-tail alignment (adapter sequences concatenated).
+
+7.	-nnn-check 3/5
 Filters reads based on the occurrence of consecutive N (ambiguous bases):
-	•	3: Maximum allowable consecutive N.
-	•	5: Fractional threshold of ambiguous bases to discard a read.
-	8.	-format-clean @%I%n%C%n+%n%Q%n
+	3: Maximum allowable consecutive N.
+	5: Fractional threshold of ambiguous bases to discard a read.
+
+8.	-format-clean @%I%n%C%n+%n%Q%n
 Specifies the output format for cleaned reads, matching the standard FASTQ format:
-	•	@%I: Read ID.
-	•	%C: Read sequence.
-	•	+%n: Separator line.
-	•	%Q: Quality scores.
-	9.	-polya 5
+	@%I: Read ID.
+	%C: Read sequence.
+	+%n: Separator line.
+	%Q: Quality scores.
+
+9.	-polya 5
 Trims poly-A tails from reads if the tail is at least 5 bases long.
-	10.	-qqq-check 35/10
+
+10.	-qqq-check 35/10
 Filters reads based on quality:
-	•	35: Quality threshold.
-	•	10: Minimum percentage of bases in the read that must meet the quality threshold.
-	11.	-tri 35
+	35: Quality threshold.
+	10: Minimum percentage of bases in the read that must meet the quality threshold.
+
+11.	-tri 35
 Trims low-quality bases from the ends of reads until the remaining sequence has an average quality score of at least 35.
  
 ## sRNA-seq alignmet
