@@ -41,6 +41,7 @@ tb = featureCounts(files = bam_list,
                    nthreads = thr,
                    useMetaFeatures=TRUE,
                    fraction = TRUE) # distribute mm reads in fractions
+
 # export fc object
 saveRDS(tb, outfile1)
 # and the fc table

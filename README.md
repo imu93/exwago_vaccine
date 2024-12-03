@@ -164,3 +164,4 @@ done
 For expression quantification we used the featureCounts function from Rsubread (Liao et al., 2019).
 Briefly, we used the gene annotation and the bam files produced by STAR to count expression at the gene level using the `04.featureCounts_RNAseq.R` script
 
+ExWAGO counts were further normalized into TPMs using the `05.exwago_TPM_per_lib.R`
