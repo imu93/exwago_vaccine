@@ -29,7 +29,7 @@ bam_list = list.files(pattern = ".*sorted.bam$")
 
 # Set reverse estrand for H. bakeri
 # The rest of datasets are unstranded
-str = ifelse(species == "heligmosomoides_bakeri", 2, 0)
+str = ifelse(grepl("heligmosomoides_bakeri|teladorsagia_circumcincta", species), 2, 0)
 thr = 40
 tb = featureCounts(files = bam_list,
                    annot.ext = df, # annotation
