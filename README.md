@@ -1,4 +1,4 @@
-# Scripts and files associated with the vaccine manuscript
+# Scripts and files associated with: Vaccination against an extracellular Argonaute protein confers protection against gastrointestinal nematode infection.
 ---
 ## To align trimm adpters from sRNA-seq libraries we used reaper from the Kraken package (Davis et al., 2013):
 ```
