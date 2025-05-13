@@ -1,4 +1,4 @@
-# Scripts and files associated with: Vaccination against an extracellular Argonaute protein confers protection against gastrointestinal nematode infection.
+# Scripts and files associated with: A non-vesicular Argonaute protein is transmitted from nematode to mouse and is important for parasite survival.
 ---
 ## To align trimm adpters from sRNA-seq libraries we used reaper from the Kraken package (Davis et al., 2013):
 ```
