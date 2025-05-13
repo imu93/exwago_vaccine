@@ -1,8 +1,8 @@
 # This script aims produce gene expression tables from bam files
-# This script should be run within a the directory where all the bamfiles
+# This script should be run within a the directory where all the bam files
 # from a single species are located. 
 
-# As input the script also rquere the gtf files of the gene annotaton of each species
+# As input the script also needs the gtf files of the gene annotation of each species
 
 # Load packages
 pacman::p_load(Rsubread, rtracklayer, dplyr)
@@ -24,10 +24,10 @@ df = data.frame("GeneID"= genome$ID,
                 "End"=end(genome),
                 "Strand"=strand(genome))
 
-# deffine input bamfiles
+# define input bamfiles
 bam_list = list.files(pattern = ".*sorted.bam$") 
 
-# Set reverse estrand for H. bakeri
+# Set reverse strand for H. bakeri
 # The rest of datasets are unstranded
 str = ifelse(grepl("heligmosomoides_bakeri|teladorsagia_circumcincta", species), 2, 0)
 thr = 40

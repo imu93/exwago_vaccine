@@ -1,9 +1,9 @@
 # This script aims to produce Rds files from bams
 # Load packages
 pacman::p_load(rtracklayer, Rsamtools, parallel)
-# Deffine colummns to extract from bam files
+# Define columns to extract from bam files
 what_to_extract = c("rname", "pos", "qwidth", "strand", "flag", "seq", "qname")
-# Deffine input files
+# Define input files
 bams = list.files(pattern = ".*.bam$")
 
 # Check if any BAM files are present

@@ -1,4 +1,4 @@
-# This script aims to produce tables with sRNA counts using segemented annotations
+# This script aims to produce tables with sRNA counts using segmented annotations
 pacman::p_load(Rsubread, rtracklayer)
 args = commandArgs(trailingOnly = T)
 annFile = args[1]
@@ -26,8 +26,8 @@ tb = featureCounts(files = bam_list, annot.ext = df, allowMultiOverlap= TRUE, st
 
 # allowMultiOverlap = TRUE means that I will allow feature-feature overlaps
 # strandSpecific = 1 means that the count should be guided by strand
-# fracOverlap means that at least 70% of each read must align to afeature to be assigned
-# largestOverlap = TRUE specifiy that if I have reads aligning to both features, reads will be asigened to the one with the larges overlap
+# fracOverlap means that at least 70% of each read must align to feature to be assigned
+# largestOverlap = TRUE specify that if I have reads aligning to both features, reads will be assigned to the one with the larges overlap
 # Bearing in mid that all these bams lack the 'NH' tag all of them will count as unique mappers
 
 # Finally I'll save the table

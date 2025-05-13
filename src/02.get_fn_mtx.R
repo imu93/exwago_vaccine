@@ -2,7 +2,7 @@
 # Load packages
 pacman::p_load(rtracklayer,parallel)
 args = commandArgs(trailingOnly = T)
-# add sufix for outFile
+# add suffix for outFile
 species=args[1]
 outFile = sub("\\..*", "", species)
 

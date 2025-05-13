@@ -1,8 +1,8 @@
 # This script aims to produce fn plots normalized by cpm
-# depens on 01.bam2Rds and 02.get_fn_mtx.R
+# depends on 01.bam2Rds and 02.get_fn_mtx.R
 
-# For Neophytou et al., 2024 the whole script is not 100% necesary but 
-# I'll save some lines to be able to accses to the code for non CPM norm plots
+# For Neophytou et al., 2024 the whole script is not 100% necessary but 
+# I'll save some lines to be able to access to the code for non CPM norm plots
 pacman::p_load(ggplot2, ggpubr, pals, reshape2, scales, dplyr, purrr, edgeR, tibble)
 inFile="acey.exwago.fn.all_lengths.Rds"
 outFile = paste0(sub("\\..*", "", inFile),".exWAGO_IP_raw_cpm.Rds")
