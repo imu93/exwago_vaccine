@@ -10,7 +10,7 @@ outFile1 = paste0(species, ".srna_1827.FC.RDS")
 outFile2 = paste0(species, ".counts.1827.txt")
 # My annotation files has some unstranded categories such as Unknown
 # Let's count in both strands just in case
-unk_As = genome[grepl("Unk", genome$class),]
+unk_As = genome[grepl("Unk|MITE|Sat|intergenic", genome$class),]
 strand(unk_As) = ifelse(strand(unk_As) == "+", "-", "+")
 genome = c(genome, unk_As)
 
