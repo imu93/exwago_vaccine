@@ -8,7 +8,7 @@ These two gzipped, tab-delimited count matrices produced with **featureCounts** 
    Primary count matrix built with featureCounts from ShortStack 3.8.5 BAM files.  
    Includes all quantified loci/features used downstream.
 
-2. **`nxHelBake1.1.counts_adult_vs_secretetion_filtred_1827.txt.gz`**  
+2. **`nxHelBake1.1.counts_adult_vs_secretion_filtered_1827.txt.gz`**  
    Same format as above, but **restricted to the union of loci enriched in IP** based on differential expression analysis (DEA):  
    - EV: IP vs Ub  
    - EV-depHES (Sup): IP vs Ub  
@@ -26,5 +26,5 @@ These two gzipped, tab-delimited count matrices produced with **featureCounts** 
 - **Sup Ub** *(EV-depHES Ub)*
 
 # md5sum
-49762a29fe6f3fb393c0795429f9fbb5  nxHelBake1.1.counts_adult_vs_secretetion_filtred_1827.txt.gz
+49762a29fe6f3fb393c0795429f9fbb5  nxHelBake1.1.counts_adult_vs_secretion_filtered_1827.txt.gz
 b2b54d2dd4f8003382940b0467005caa  nxHelBake1.1.counts.exWAGO_1827.txt.gz
