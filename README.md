@@ -1,4 +1,4 @@
-# Scripts and files associated with: A non-vesicular Argonaute protein is transmitted from nematode to mouse and is important for parasite survival.
+# Scripts and files associated with: An Argonaute protein traffics from nematode to mouse and is a vaccine against parasitic nematodes.
 ---
 ## To align trimm adpters from sRNA-seq libraries we used reaper from the Kraken package (Davis et al., 2013):
 ```
